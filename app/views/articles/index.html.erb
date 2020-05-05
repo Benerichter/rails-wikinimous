@@ -1,0 +1,13 @@
+<h1>Articles</h1>
+<ul>
+  <% @articles.each do |e| %>
+    <li>
+      <h2>
+        <%= link_to e.title, article_path(e.id) %>
+    </h2>
+    <p>
+      <%= e.content[0, 200] %>
+    </p>
+  </li>
+  <% end %>
+</ul>
